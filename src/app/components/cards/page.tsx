@@ -2,23 +2,16 @@ import Image from 'next/image';
 
 interface ProjectCardProps {
     title: string;
-    image: string; // Propiedad para la imagen
+    image: string;
     link: string;
 }
 
 const ProjectCard = ({ title, image, link }: ProjectCardProps) => {
     return (
         <div className="project-card">
-            <a href={link} target="_blank" rel="noopener noreferrer">
-                <Image 
-                    src={image} // Asegúrate de que la ruta comience con /
-                    alt={title} 
-                    className="project-image" 
-                    width={300} // Ajusta el ancho según lo necesites
-                    height={200} // Ajusta la altura según lo necesites
-                />
-                <h2>{title}</h2>
-            </a>
+            <Image src={image} alt={title} width={300} height={200} />
+            <h3>{title}</h3>
+            <a href={link}>View Project</a>
         </div>
     );
 };
