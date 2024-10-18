@@ -3,7 +3,7 @@
   flex-direction: column; /* Alinear verticalmente */
   gap: 20px; /* Espaciado entre los iconos */
   padding: 20px; /* Espaciado interno */
-  background-color: #fff; /* Fondo de la barra de navegación */
+  background-color: #2c1dff; /* Fondo de la barra de navegación */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
   position: fixed; /* Fija la navegación a la izquierda */
@@ -24,7 +24,7 @@
 }
 
 .navbar a:hover {
-  color: #0070f3; /* Color en hover */
+  color: #3a90f3; /* Color en hover */
 }
 
 .active {

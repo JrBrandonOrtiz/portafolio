@@ -1,11 +1,9 @@
-// src/app/components/navbar/page.tsx
-
 "use client";
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import styles from './navbar.module.css'; // Asegúrate de que la ruta sea correcta
+import styles from './navbar.module.css';
 import { CiUser } from 'react-icons/ci'; 
 import { GrTechnology } from 'react-icons/gr'; 
 import { GrProjects } from 'react-icons/gr'; 
@@ -31,18 +29,25 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className={styles.navbar}>
-      <Link href="/" className={activeLink === 'about' ? styles.active : ''}>
+      <Link href="#about" onClick={() => scrollToSection('about')} className={activeLink === 'about' ? styles.active : ''}>
         <CiUser />
       </Link>
-      <Link href="/about" className={activeLink === 'technologies' ? styles.active : ''}>
+      <Link href="#technologies" onClick={() => scrollToSection('technologies')} className={activeLink === 'technologies' ? styles.active : ''}>
         <GrTechnology />
       </Link>
-      <Link href="/projects" className={activeLink === 'projects' ? styles.active : ''}>
+      <Link href="#projects" onClick={() => scrollToSection('projects')} className={activeLink === 'projects' ? styles.active : ''}>
         <GrProjects />
       </Link>
-      <Link href="/contact" className={activeLink === 'contact' ? styles.active : ''}>
+      <Link href="#contact" onClick={() => scrollToSection('contact')} className={activeLink === 'contact' ? styles.active : ''}>
         <MdOutlineContactPage />
       </Link>
     </nav>
