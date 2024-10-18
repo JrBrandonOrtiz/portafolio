@@ -5,7 +5,7 @@ const ProjectsPage = () => {
     const projects = [
         {
             title: 'Proyecto 1',
-            image: '.\images\pagina-web.webp', // Ruta de la imagen
+            image: '/images/proyecto1.jpg', // Ruta de la imagen
             link: 'https://enlaceproyecto1.com',
         },
         {
