@@ -1,3 +1,5 @@
+"use client"; // Marca este componente como un componente del cliente
+
 import { useEffect, useState } from 'react';
 import '../about/about.css';
 
@@ -25,6 +27,7 @@ const AboutPage = () => {
             src={img}
             alt={`Bitmoji ${index + 1}`}
             className={`bitmoji ${currentImage === index ? 'active' : ''}`}
+            style={{ display: currentImage === index ? 'block' : 'none' }} // Mostrar solo la imagen activa
           />
         ))}
       </div>
