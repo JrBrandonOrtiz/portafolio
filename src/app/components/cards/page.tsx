@@ -1,12 +1,6 @@
 import Image from 'next/image';
 
-interface ProjectCardProps {
-    title: string;
-    image: string;
-    link: string;
-}
-
-const ProjectCard = ({ title, image, link }: ProjectCardProps) => {
+const ProjectCard = ({ title, image, link }: { title: string; image: string; link: string; }) => {
     return (
         <div className="project-card">
             <a href={link} target="_blank" rel="noopener noreferrer">
