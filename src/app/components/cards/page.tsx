@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 interface ProjectCardProps {
     title: string;
-    image: string; // Agrega una propiedad para la imagen
+    image: string; // Propiedad para la imagen
     link: string;
 }
 
@@ -11,7 +11,7 @@ const ProjectCard = ({ title, image, link }: ProjectCardProps) => {
         <div className="project-card">
             <a href={link} target="_blank" rel="noopener noreferrer">
                 <Image 
-                    src={image} 
+                    src={image} // Asegúrate de que la ruta comience con /
                     alt={title} 
                     className="project-image" 
                     width={300} // Ajusta el ancho según lo necesites
@@ -23,4 +23,6 @@ const ProjectCard = ({ title, image, link }: ProjectCardProps) => {
     );
 };
 
+// Asegúrate de que el archivo se llame `ProjectCard.tsx` y no `page.tsx`
 export default ProjectCard;
+
