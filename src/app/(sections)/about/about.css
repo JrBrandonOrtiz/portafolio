@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo claro */
+    border: 0; /* Sin bordes visibles */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    height: 100%; /* Asegura que ocupe el 100% de la altura del contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+.bitmoji-container {
+    position: relative; /* Permite la superposición de imágenes */
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: 100px; /* Ajusta el tamaño de la imagen */
+    overflow: hidden; /* Esconde las partes que sobresalen */
+}
+
+.bitmoji {
+    position: absolute; /* Para permitir superposición */
+    width: 100%; /* Ocupa el 100% del contenedor */
+    height: 100%; /* Ocupa el 100% del contenedor */
+    opacity: 0; /* Comienza invisible */
+    transition: opacity 0.5s ease-in-out; /* Transición suave */
+}
+
+/* Estilos para las imágenes activas */
+.bitmoji.active {
+    opacity: 1; /* Hace visible la imagen activa */
+}
+
+/* Estilos para los encabezados */
+h1, h2 {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 24px 0 0; /* Margen superior */
+    text-align: center; /* Centrar texto */
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamaño grande para el nombre */
+    line-height: 1.2; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+    width: 385px; /* Ancho específico */
+}
+
+h2 {
+    font-size: 1.8rem; /* Tamaño mediano para el título */
+    color: #002fff; /* Color más suave para el subtítulo */
+    margin-top: 8px; /* Espaciado superior */
+    width: 385px; /* Ancho específico */
+}
+
+/* Estilos para el párrafo */
+p {
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.5; /* Espaciado entre líneas */
+    text-align: center; /* Centrar texto */
+    margin-top: 12px; /* Espaciado superior */
+    width: 385px; /* Ancho específico */
+    color: #666666; /* Color del texto */
+}

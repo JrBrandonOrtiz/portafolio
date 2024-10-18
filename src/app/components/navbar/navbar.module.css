@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  flex-direction: column; /* Alinear verticalmente */
+  gap: 20px; /* Espaciado entre los iconos */
+  padding: 20px; /* Espaciado interno */
+  background-color: #fff; /* Fondo de la barra de navegación */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+  position: fixed; /* Fija la navegación a la izquierda */
+  top: 20px; /* Ajusta la distancia del borde superior */
+  left: 20px; /* Ajusta la distancia del borde izquierdo */
+  z-index: 1000; /* Para que esté por encima de otros elementos */
+  width: 60px; /* Ancho de la barra de navegación */
+}
+
+.navbar a {
+  display: flex; /* Usar flex para centrar los iconos */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  text-decoration: none; /* Sin subrayado */
+  color: #333; /* Color del texto */
+  font-size: 1.5rem; /* Tamaño de fuente para los iconos */
+  transition: color 0.3s; /* Transición suave en hover */
+}
+
+.navbar a:hover {
+  color: #0070f3; /* Color en hover */
+}
+
+.active {
+  color: #0070f3; /* Color activo */
+}

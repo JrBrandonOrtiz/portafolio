@@ -1,0 +1,43 @@
+h2  {
+    margin: 0 auto; /* Elimina margen para asegurar que esté centrado */
+    padding: 10px; /* Opcional: espacio interno */
+    font-size: 2rem; /* Ajusta el tamaño si es necesario */
+    color: #0400ff; /* Color del texto */
+    text-align: center; /* Centra horizontalmente */
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 15px; /* Menor espacio entre los íconos */
+    margin: 20px auto; /* Centra la cuadrícula */
+    max-width: 1200px; /* Ancho máximo para la cuadrícula */
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los íconos y el texto */
+    justify-content: center;
+    padding: 15px; /* Menor padding para un diseño más compacto */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco para cada ícono */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.tech-item:hover {
+    transform: scale(1.05); /* Escala al pasar el mouse */
+}
+
+.tech-item span {
+    margin-top: 5px; /* Menor espacio entre el ícono y el texto */
+    font-family: "Source Sans Pro", sans-serif; /* Fuente específica */
+    font-size: 0.9rem; /* Ajusta el tamaño de texto si es necesario */
+    color: #333; /* Color del texto */
+}
+
+.tech-item svg {
+    width: 40px; /* Tamaño de los íconos */
+    height: 40px; /* Mantiene la proporción de los íconos */
+}

@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-items: center; /* Centra cada tarjeta dentro de la celda */
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s; /* Transición suave al escalar */
+    text-align: center; /* Centra el texto */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Escalar al pasar el mouse */
+}
+
+.project-image {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.project-card h2 {
+    font-size: 1.5rem; /* Tamaño del título */
+    margin: 10px 0; /* Espacio encima y debajo del título */
+}
