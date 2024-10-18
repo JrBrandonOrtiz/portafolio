@@ -23,6 +23,4 @@ const ProjectCard = ({ title, image, link }: ProjectCardProps) => {
     );
 };
 
-// Asegúrate de que el archivo se llame `ProjectCard.tsx` y no `page.tsx`
 export default ProjectCard;
-

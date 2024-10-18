@@ -1,4 +1,4 @@
-import ProjectCard from "@/app/components/cards/page";
+import ProjectCard from '@/app/components/cards/page'; // Asegúrate de que la ruta sea correcta
 import './projects.css';
 
 const ProjectsPage = () => {
