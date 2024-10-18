@@ -16,7 +16,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section'); 
-      let scrollPos = window.scrollY + 50; 
+      const scrollPos = window.scrollY + 50; // Cambiado a const
 
       sections.forEach((section) => {
         if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {

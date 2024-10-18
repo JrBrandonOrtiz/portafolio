@@ -1,6 +1,7 @@
 "use client"; // Marca este componente como un componente del cliente
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import '../about/about.css';
 
 const AboutPage = () => {
@@ -16,18 +17,20 @@ const AboutPage = () => {
     }, 3000); // Cambia la imagen cada 3 segundos
 
     return () => clearInterval(interval); // Limpieza del intervalo al desmontar el componente
-  }, []);
+  }, [images.length]); // Agrega `images.length` como dependencia
 
   return (
     <section id="about">
       <div className="bitmoji-container">
         {images.map((img, index) => (
-          <img
+          <Image
             key={index}
             src={img}
             alt={`Bitmoji ${index + 1}`}
             className={`bitmoji ${currentImage === index ? 'active' : ''}`}
             style={{ display: currentImage === index ? 'block' : 'none' }} // Mostrar solo la imagen activa
+            width={100} // Ajusta el ancho según lo necesites
+            height={100} // Ajusta la altura según lo necesites
           />
         ))}
       </div>
