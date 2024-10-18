@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-// Define la interfaz para las props
+
 interface ProjectCardProps {
     title: string;
     image: string;
@@ -17,7 +17,7 @@ const ProjectCard = ({ title, image, link }: ProjectCardProps) => {
                     width={300} 
                     height={200} 
                     className="project-image" 
-                    priority // Mejora el rendimiento
+                    priority 
                 />
                 <h3 className="project-title">{title}</h3>
             </a>
