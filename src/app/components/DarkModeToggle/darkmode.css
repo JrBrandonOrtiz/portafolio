@@ -1,0 +1,17 @@
+/* src/app/components/DarkModeToggle/DarkModeToggle.css */
+
+.dark-mode-toggle {
+    position: fixed; /* Fijo para que flote */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+    padding: 8px; /* Espaciado interno */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+  }
+  
+  .dark-mode-toggle:hover {
+    color: gray; /* Color al pasar el ratón */
+  }
+  

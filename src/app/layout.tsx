@@ -14,9 +14,14 @@ const raleway = Raleway({ subsets: ["latin"] });
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="es">
-      <body className={raleway.className}>
-        {children}
+      <body className={`${raleway.className} bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300`}>
+        <header className="flex justify-between items-center p-4">
+        </header>
+        <main>{children}</main>
+        <footer className="p-4 text-center">
+          © 2024 Jorge Brandon Ortiz Arango
+        </footer>
       </body>
-    </html>
-  );
+    </html>
+  );
 }

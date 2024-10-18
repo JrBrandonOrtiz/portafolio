@@ -2,18 +2,21 @@
 
 'use client';
 
-import Navbar from './components/navbar/page'; // Ajusta la ruta si es necesario
-import Footer from './components/footer/page'; // Ajusta la ruta si es necesario
-import AboutPage from './(sections)/about/page'; // Ruta del componente About
-import ProjectsPage from './(sections)/projects/page'; // Ruta del componente Projects
-import Contactpage from './(sections)/contact/page'; // Ruta del componente Contact
+import { ThemeProvider } from './components/DarkModeToggle/DarkModeToggle'; // Asegúrate de que la ruta sea correcta
+import Navbar from './components/navbar/page';
+import Footer from './components/footer/page';
+import AboutPage from './(sections)/about/page';
+import ProjectsPage from './(sections)/projects/page';
+import Contactpage from './(sections)/contact/page';
 import './styles/globals.css';
 import TechnologiesPage from './(sections)/technologies/page';
+import DarkModeToggle from './components/DarkModeToggle/DarkModeButton';
 
 const Home = () => {
   return (
-    <>
+    <ThemeProvider>
       <Navbar />
+      <DarkModeToggle /> {/* Aquí colocas el botón para alternar el modo oscuro */}
       <main>
         <AboutPage />
         <TechnologiesPage />
@@ -21,7 +24,7 @@ const Home = () => {
         <Contactpage />
       </main>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 };
 

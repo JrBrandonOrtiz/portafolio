@@ -7,17 +7,33 @@
   box-sizing: border-box;
 }
 
+/* Variables para modo claro y oscuro */
+:root {
+  --background-color: #f4f4f4; /* Color de fondo claro */
+  --text-color: black; /* Color de texto claro */
+}
+
+[data-theme='dark'] {
+  --background-color: black; /* Color de fondo oscuro */
+  --text-color: white; /* Color de texto oscuro */
+}
+
 /* Estilos globales */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #000000;
+  background-color: var(--background-color); /* Usar variable para el fondo */
+  color: var(--text-color); /* Usar variable para el texto */
   line-height: 1.6;
-  
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+}
+
+/* Asegúrate de que otros elementos también utilicen las variables */
+h1, h2, h3, p {
+  color: var(--text-color); /* Usar variable para el texto */
 }
